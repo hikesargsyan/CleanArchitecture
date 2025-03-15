@@ -1,7 +1,7 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
 
-var databaseName = "AppDatabase";
+var databaseName = "Database"; 
 
 var postgres = builder
     .AddPostgres("Postgres")
@@ -9,8 +9,8 @@ var postgres = builder
 
 var database = postgres.AddDatabase(databaseName);
 
-builder.AddProject<Projects.API>("API")
-    .WithReference(database)
+builder.AddProject<Projects.API>("App")
+    .WithReference(database) 
     .WaitFor(database);
 
 builder.Build().Run();
