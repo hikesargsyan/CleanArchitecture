@@ -1,7 +1,4 @@
-﻿using App.Application._Common.Interfaces;
-using App.Domain.Events;
-
-namespace App.Application.TodoItems.Commands.DeleteTodoItem;
+﻿namespace App.Application.Features.TodoItems.Requests.Delete;
 
 public record DeleteTodoItemRequest(int Id) : IRequest;
 

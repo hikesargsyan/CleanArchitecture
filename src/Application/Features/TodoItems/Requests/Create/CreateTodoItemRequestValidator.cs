@@ -1,4 +1,4 @@
-﻿namespace App.Application.TodoItems.Commands.CreateTodoItem;
+﻿namespace App.Application.Features.TodoItems.Requests.Create;
 
 public class CreateTodoItemRequestValidator : AbstractValidator<CreateTodoItemRequest>
 {

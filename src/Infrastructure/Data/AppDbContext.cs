@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using App.Application._Common.Interfaces;
+using App.Application.Common.Interfaces;
 using App.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 

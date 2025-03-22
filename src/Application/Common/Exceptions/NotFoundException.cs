@@ -1,6 +1,6 @@
-namespace App.Application._Common.Exceptions;
+namespace App.Application.Common.Exceptions;
 
 public class NotFoundException: Exception
 {
-    public NotFoundException() : base() { }
+    public NotFoundException(string entityName) : base($"{entityName} was not found.") { }
 }

@@ -1,8 +1,8 @@
-﻿using App.Application._Common.Exceptions;
+﻿using App.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace App.Web.Infrastructure;
+namespace App.API.Infrastructure;
 
 public class CustomExceptionHandler : IExceptionHandler
 {

@@ -1,5 +1,3 @@
-﻿using App.Domain.Entities;
+﻿namespace App.Application.Features.TodoItems.Models;
 
-namespace App.Application.TodoItems.Queries.GetTodoItemsWithPagination;
-
-public record TodoItemModel(int Id, int ListId, string? Title, bool IsDone);
+public record TodoItemModel(Guid Id, int ListId, string? Title, bool IsDone);

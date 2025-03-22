@@ -1,4 +1,4 @@
-﻿namespace App.Application._Common.Interfaces;
+﻿namespace App.Application.Common.Interfaces;
 
 public interface ICurrentUser
 {

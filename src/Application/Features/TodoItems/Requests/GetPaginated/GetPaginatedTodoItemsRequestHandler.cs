@@ -1,8 +1,10 @@
-﻿using App.Application._Common.Interfaces;
-using App.Application._Common.Models;
-using App.Application._Common.Mappings;
+﻿using App.Application.Common.Extensions;
+using App.Application.Common.Interfaces;
+using App.Application.Common.Models;
+using App.Application.Features.TodoItems.Models;
+using App.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
-namespace App.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace App.Application.Features.TodoItems.Requests.GetPaginated;
 
 public class GetTodoItemsWithPaginationQueryHandler(IAppDbContext context)
     : IRequestHandler<GetPaginatedTodoItemsRequest, PaginatedList<TodoItemModel>>

@@ -1,4 +1,4 @@
-﻿namespace App.Web.Infrastructure;
+﻿namespace App.API.Infrastructure;
 
 public abstract class EndpointGroupBase
 {

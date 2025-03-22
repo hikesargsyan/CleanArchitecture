@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
-using App.Application._Common.Interfaces;
+using App.Application.Common.Interfaces;
 
-namespace App.Web.Services;
+namespace App.API.Services;
 
 public class CurrentCurrentUser : ICurrentUser
 {

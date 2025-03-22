@@ -1,22 +1,22 @@
-using App.Application._Common.Exceptions;
-using App.Application._Common.Interfaces;
+using App.Application.Common.Exceptions;
+using App.Application.Common.Interfaces;
 
-namespace App.Application.TodoItems.Commands.UpdateTodoItem;
+namespace App.Application.Features.TodoItems.Requests.Update;
 
 public class UpdateTodoItemRequestHandler(IAppDbContext context) : IRequestHandler<UpdateTodoItemRequest>
 {
     public async Task Handle(UpdateTodoItemRequest request, CancellationToken cancellationToken)
     {
-        var entity = await context.TodoItems
+        var todoItem = await context.TodoItems
             .FindAsync([request.Id], cancellationToken);
 
-        if (entity == null)
+        if (todoItem == null)
         {
-            throw new NotFoundException();
+            throw new NotFoundException(nameof(todoItem));
         }
 
-        entity.Title = request.Title;
-        entity.IsDone = request.IsDone;
+        todoItem.Title = request.Title;
+        todoItem.IsDone = request.IsDone;
 
         await context.SaveChangesAsync(cancellationToken);
     }

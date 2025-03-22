@@ -1,8 +1,8 @@
-﻿using App.Application._Common.Interfaces;
+﻿using App.Application.Common.Interfaces;
 using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
-namespace App.Application._Common.Behaviours;
+namespace App.Application.Common.Behaviours;
 
 public class LoggingBehaviour<TRequest>(ILogger<TRequest> logger, ICurrentUser currentUser)
     : IRequestPreProcessor<TRequest> where TRequest : notnull

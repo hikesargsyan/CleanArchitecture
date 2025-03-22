@@ -8,8 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsAspireHost>true</IsAspireHost>
-    <RootNamespace>App.Aspire</RootNamespace>
-    <AssemblyName>App.Aspire</AssemblyName>
+    <RootNamespace>App.AppHost</RootNamespace>
+    <AssemblyName>App.AppHost</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

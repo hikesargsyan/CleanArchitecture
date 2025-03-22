@@ -1,7 +1,6 @@
-﻿using App.Application._Common.Models;
-using Microsoft.Extensions.Configuration;
+﻿using App.Application.Common.Models;
 
-namespace App.Application._Common.Mappings;
+namespace App.Application.Common.Extensions;
 
 public static class MappingExtensions
 {

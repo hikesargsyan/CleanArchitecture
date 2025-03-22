@@ -1,8 +1,9 @@
-﻿using _Common_Exceptions_ValidationException = App.Application._Common.Exceptions.ValidationException;
-using Exceptions_ValidationException = App.Application._Common.Exceptions.ValidationException;
-using ValidationException = App.Application._Common.Exceptions.ValidationException;
+﻿using _Common_Exceptions_ValidationException = App.Application.Common.Exceptions.ValidationException;
+using Common_Exceptions_ValidationException = App.Application.Common.Exceptions.ValidationException;
+using Exceptions_ValidationException = App.Application.Common.Exceptions.ValidationException;
+using ValidationException = App.Application.Common.Exceptions.ValidationException;
 
-namespace App.Application._Common.Behaviours;
+namespace App.Application.Common.Behaviours;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : notnull
@@ -30,7 +31,7 @@ public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TReque
                 .ToList();
 
             if (failures.Any())
-                throw new _Common_Exceptions_ValidationException(failures);
+                throw new Common_Exceptions_ValidationException(failures);
         }
         return await next();
     }

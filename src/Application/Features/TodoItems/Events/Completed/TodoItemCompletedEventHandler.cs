@@ -1,9 +1,8 @@
-﻿using App.Domain.Events;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 
-namespace App.Application.TodoItems.EventHandlers;
+namespace App.Application.Features.TodoItems.Events.Completed;
 
-public class TodoItemCompletedEventHandler : INotificationHandler<Domain.Events.TodoItemCompletedEvent>
+public class TodoItemCompletedEventHandler : INotificationHandler<TodoItemCompletedEvent>
 {
     private readonly ILogger<TodoItemCompletedEventHandler> _logger;
 
@@ -12,7 +11,7 @@ public class TodoItemCompletedEventHandler : INotificationHandler<Domain.Events.
         _logger = logger;
     }
 
-    public Task Handle(Domain.Events.TodoItemCompletedEvent notification, CancellationToken cancellationToken)
+    public Task Handle(TodoItemCompletedEvent notification, CancellationToken cancellationToken)
     {
         _logger.LogInformation("CleanArchitecture Domain Event: {DomainEvent}", notification.GetType().Name);
 

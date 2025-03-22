@@ -1,5 +1,6 @@
-﻿using App.Application._Common.Interfaces;
-using App.Web.Services;
+﻿using App.API.Infrastructure;
+using App.Application.Common.Interfaces;
+using App.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 

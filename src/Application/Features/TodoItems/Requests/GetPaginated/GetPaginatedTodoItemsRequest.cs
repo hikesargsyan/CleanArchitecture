@@ -1,4 +1,5 @@
-using App.Application._Common.Models;
+using App.Application.Common.Models;
+using App.Application.Features.TodoItems.Models;
 
 namespace App.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 

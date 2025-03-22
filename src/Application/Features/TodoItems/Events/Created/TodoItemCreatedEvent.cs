@@ -1,7 +1,7 @@
 ﻿using App.Domain.Common;
 using App.Domain.Entities;
 
-namespace App.Domain.Events;
+namespace App.Application.Features.TodoItems.Events.Created;
 
 public class TodoItemCreatedEvent : BaseEvent
 {

@@ -1,6 +1,6 @@
 ﻿using App.Domain.Entities;
 
-namespace App.Application._Common.Interfaces;
+namespace App.Application.Common.Interfaces;
 
 public interface IAppDbContext
 {

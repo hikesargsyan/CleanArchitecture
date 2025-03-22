@@ -1,14 +1,14 @@
-﻿using App.Application._Common.Interfaces;
-using App.Domain.Constants;
+﻿using App.Application.Common.Interfaces;
 using App.Infrastructure.Data;
 using App.Infrastructure.Data.Interceptors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Microsoft.Extensions.DependencyInjection;
+namespace App.Infrastructure;
 
 public static class DependencyInjection
 {

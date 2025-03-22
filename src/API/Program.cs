@@ -1,4 +1,8 @@
 
+using App.API.Infrastructure;
+using App.Application;
+using App.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();

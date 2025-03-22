@@ -1,5 +1,3 @@
-﻿using App.Application._Common.Interfaces;
-
-namespace App.Application.TodoItems.Commands.UpdateTodoItem;
+﻿namespace App.Application.Features.TodoItems.Requests.Update;
 
 public record UpdateTodoItemRequest(int Id, string? Title, bool IsDone) : IRequest;

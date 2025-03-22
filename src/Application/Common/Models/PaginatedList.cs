@@ -1,4 +1,4 @@
-﻿namespace App.Application._Common.Models;
+﻿namespace App.Application.Common.Models;
 
 public class PaginatedList<T>
 {

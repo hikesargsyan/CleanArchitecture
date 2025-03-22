@@ -1,20 +1,12 @@
-using App.Application._Common.Interfaces;
+using App.Application.Common.Interfaces;
+using App.Application.Features.TodoItems.Events.Created;
 using App.Domain.Entities;
-using App.Domain.Events;
 
-namespace App.Application.TodoItems.Commands.CreateTodoItem;
+namespace App.Application.Features.TodoItems.Requests.Create;
 
-
-public class CreateTodoItemRequestHandler : IRequestHandler<CreateTodoItemRequest, int>
+public class CreateTodoItemRequestHandler(IAppDbContext context) : IRequestHandler<CreateTodoItemRequest, Guid>
 {
-    private readonly IAppDbContext _context;
-
-    public CreateTodoItemRequestHandler(IAppDbContext context)
-    {
-        _context = context;
-    }
-
-    public async Task<int> Handle(CreateTodoItemRequest request, CancellationToken cancellationToken)
+    public async Task<Guid> Handle(CreateTodoItemRequest request, CancellationToken cancellationToken)
     {
         var entity = new TodoItem
         {
@@ -25,9 +17,9 @@ public class CreateTodoItemRequestHandler : IRequestHandler<CreateTodoItemReques
 
         entity.AddDomainEvent(new TodoItemCreatedEvent(entity));
 
-        _context.TodoItems.Add(entity);
+        context.TodoItems.Add(entity);
 
-        await _context.SaveChangesAsync(cancellationToken);
+        await context.SaveChangesAsync(cancellationToken);
 
         return entity.Id;
     }

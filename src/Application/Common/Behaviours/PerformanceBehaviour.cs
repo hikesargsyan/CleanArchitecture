@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
-using App.Application._Common.Interfaces;
+using App.Application.Common.Interfaces;
 using Microsoft.Extensions.Logging;
 
-namespace App.Application._Common.Behaviours;
+namespace App.Application.Common.Behaviours;
 
 public class PerformanceBehaviour<TRequest, TResponse>(ILogger<TRequest> logger, ICurrentUser currentUser)
     : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull

@@ -1,11 +1,13 @@
-﻿using App.Application._Common.Models;
-using App.Application.TodoItems.Commands.CreateTodoItem;
-using App.Application.TodoItems.Commands.DeleteTodoItem;
-using App.Application.TodoItems.Commands.UpdateTodoItem;
+﻿using App.API.Infrastructure;
+using App.Application.Common.Models;
+using App.Application.Features.TodoItems.Models;
+using App.Application.Features.TodoItems.Requests.Create;
+using App.Application.Features.TodoItems.Requests.Delete;
+using App.Application.Features.TodoItems.Requests.Update;
 using App.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace App.Web.Endpoints;
+namespace App.API.Endpoints;
 
 public class TodoItems : EndpointGroupBase
 {
@@ -26,7 +28,7 @@ public class TodoItems : EndpointGroupBase
         return TypedResults.Ok(result);
     }
 
-    public async Task<Created<int>> CreateTodoItem(ISender sender, CreateTodoItemRequest command)
+    public async Task<Created<Guid>> CreateTodoItem(ISender sender, CreateTodoItemRequest command)
     {
         var id = await sender.Send(command);
 

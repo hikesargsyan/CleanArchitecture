@@ -1,2 +1,2 @@
-global using App.Web.Infrastructure;
+global using App.API.Infrastructure;
 global using MediatR;

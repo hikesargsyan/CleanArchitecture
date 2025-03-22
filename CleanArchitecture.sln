@@ -28,7 +28,7 @@ EndProject
 #if (!UseApiOnly)
 #endif
 #if (UseAspire)
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire", "src\Aspire\Aspire.csproj", "{36483B25-E165-46F3-AA1C-ADE75A46BD8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHost", "src\AppHost\AppHost.csproj", "{36483B25-E165-46F3-AA1C-ADE75A46BD8E}"
 EndProject
 #endif
 Global
